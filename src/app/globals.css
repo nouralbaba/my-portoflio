@@ -1,3 +1,78 @@
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap');
+
+
+@layer utilities{
+    .container{
+        @apply lg:max-w-5xl;
+    }
+    
+}
+
+html, body {
+    overflow-x: hidden;
+  }
+  
+  @keyframes blink {
+    50% {
+      opacity: 0;
+    }
+  }
+  
+  .cursor {
+    display: inline-block;
+    width: 10px;
+    height: 30px;
+    background-color: white;
+    animation: blink 0.7s infinite;
+  }
+  @keyframes infinite-scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  
+  .animate-infinite-scroll {
+    animation: infinite-scroll 60s linear infinite;
+    width: fit-content;
+  }
+  @layer base {
+   
+    ::-webkit-scrollbar {
+      @apply w-2.5;
+    }
+  
+    ::-webkit-scrollbar-track {
+      @apply bg-transparent;
+    }
+  
+    ::-webkit-scrollbar-thumb {
+      @apply bg-purple-500/30 rounded-full border-2 border-solid border-transparent bg-clip-content;
+    }
+  
+    ::-webkit-scrollbar-thumb:hover {
+      @apply bg-purple-500/50;
+    }
+  
+    /* For Firefox */
+    @supports (scrollbar-color: auto) {
+      html {
+        scrollbar-color: rgba(168, 85, 247, 0.3) transparent;
+        scrollbar-width: thin;
+      }
+    }
+  }
+
+
+  
+
+  
