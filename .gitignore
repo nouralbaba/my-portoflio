@@ -34,3 +34,24 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Ignore node_modules
+node_modules/
+.next/
+out/
+dist/
+
+# Ignore environment variables
+.env.local
+.env.production
+.env.development
+
+# Ignore large media files (optional)
+public/images/
+public/videos/
+public/audio/
+
+# Ignore logs and cache
+npm-debug.log
+yarn-debug.log
+yarn-error.log

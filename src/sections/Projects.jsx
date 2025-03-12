@@ -5,6 +5,9 @@ import  Project2Image from '../assets/images/project2.jpg';
 import  Project3Image from '../assets/images/project3.jpg';
 import  Project4Image from '../assets/images/project4.jpg';
 import  Project5Image from '../assets/images/project5.jpg';
+import fitnessImage from '../assets/images/fitness-image.png';
+import crudImage from '../assets/images/crud-image.png';
+
 import Image from "next/image";
 import { FaExternalLinkAlt , FaGithub } from "react-icons/fa";
 import { IoMdCheckmarkCircleOutline } from "react-icons/io";
@@ -35,9 +38,9 @@ const portfolioProjects = [
     technologies: ["Next.js", "-Tailwind CSS", "-Framer Motion"],
     description: "Tinty Make-up Store is a vibrant e-commerce platform designed for beauty enthusiasts. With a user-friendly interface and a focus on showcasing a wide range of cosmetics, this store offers a seamless shopping experience. Customers can explore products, read reviews, and enjoy an interactive shopping cart that enhances their journey.",
     features: [
+      { title: "Multi-page navigation for a seamless shopping experience" },
       { title: "Users can add and remove items from the cart" },
-      { title: "Smooth page transitions with Framer Motion" },
-      { title: "Responsive design for all devices" },
+      { title: "Responsive design for all devices" }
     ],
     link: '',
     githubLink: "https://github.com/yourusername/tinty-makeup-store",
@@ -46,12 +49,14 @@ const portfolioProjects = [
   {
     name: "Swimming Academy",
     title: "Academy Website",
-    technologies: ["React ", '-Vite', " -Tailwind CSS", "-Framer Motion"],
-    description: "A cat adoption platform where users can view, filter, and apply to adopt cats.",
+    technologies: ["React Vite ", " -Tailwind CSS", "-Framer Motion"],
+    description: "A modern swimming academy website providing information about classes, schedules, and enrollment options with smooth animations.",
     features: [
-      {title:"Adopt Me button navigates to an adoption form"},
-      {title:"Dark mode toggle for better accessibility"},
-      {title:"Mobile-friendly layout"},
+      { "title": "Users can explore available swimming courses and schedules" },
+      { "title": "Smooth page transitions and animations with Framer Motion" },
+      { "title": "Dark mode toggle for better accessibility" },
+      { "title": "Mobile-friendly layout" }
+  ,
     ],
     link:'',
     githubLink: "https://github.com/yourusername/saas-landing-page",
@@ -59,32 +64,32 @@ const portfolioProjects = [
   },
   {
     name: "CRUD Budget Tracker",
-    technologies: ["React", " -Tailwind CSS",' -Next Js'],
+    technologies: ["Html", "- CSS",'-Javascript'],
     title: "CRUD System",
-    description: "A modern bakery e-commerce site with an interactive UI and a shopping cart.",
+    description: "A budget tracking application that allows users to manage their expenses with full CRUD (Create, Read, Update, Delete) functionality",
     features: [
-      {title:"Users can add and remove items from the cart"},
-      {title:"Smooth page transitions with Framer Motion"},
-      {title:"Responsive design for all devices"},
+      { "title": "Users can add, edit, and delete budget entries" },
+      { "title": "Real-time expense tracking and categorization" },
+      { "title": "Responsive design for all devices" }
     ],
     link:'',
-    githubLink: "https://github.com/yourusername/saas-landing-page",
-    image: Project4Image,
+    githubLink: "https://github.com/nouralbaba/event-crud",
+    image: crudImage,
   },
   {
-    name: "Calories Calculater",
-    technologies: ["Javascript", "-HTML" ," -CSS"],
-    title: "Fitness & Calorie Calculator Website",
+    name: "Fitness Exercises (API)",
+    technologies: ["React Vite", "-Tailwind css" ],
+    title: "Gym & Exercises API fetching Website",
     
-    description: "A modern bakery e-commerce site with an interactive UI and a shopping cart.",
+    description: "A fitness-focused website that fetches exercise data from an API, helping users explore various workouts and exercises.",
     features: [
-      {title: "Users can add and remove items from the cart"},
-     { title: "Smooth page transitions with Framer Motion"},
-     { title: "Responsive design for all devices"},
+      { "title": "Fetch and display exercises dynamically from an API" },
+      { "title": "Search and filter exercises by muscle group or equipment" },
+      { "title": "Responsive design for all devices" },
     ],
-    link:'',
+    link:'https://fitness-workouts.netlify.app/',
     githubLink: "https://github.com/yourusername/saas-landing-page",
-    image: Project5Image,
+    image: fitnessImage,
   },
 ];
 
@@ -200,6 +205,8 @@ export const ProjectsSection = () => {
                   <div className='flex flex-col gap-3 mt-auto'>
                     <a
                       href={project.link}
+                       target="_blank"
+                       rel="noopener noreferrer"
                       className='group relative overflow-hidden rounded-lg'
                     >
                       <button className='
@@ -216,6 +223,8 @@ export const ProjectsSection = () => {
 
                     <a
                       href={project.githubLink}
+                       target="_blank"
+                       rel="noopener noreferrer"
                       className='group relative overflow-hidden rounded-lg'
                     >
                       <button className='
